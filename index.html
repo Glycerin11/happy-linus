@@ -12,19 +12,56 @@
     <div class="cloud cloud1"></div>
     <div class="cloud cloud2"></div>
     <div class="plane" aria-hidden="true">✈️</div>
+    <div class="sparkles" aria-hidden="true">✦ ✦ ✦</div>
 
     <main class="card">
+      <div class="badge">🎉 Geburtstag</div>
       <div class="confetti">🎈 ✨ 🎉 ✨ 🎈</div>
-      <h1>Happy Birthday! 🎂</h1>
-      <p class="subtitle">Seit diesem besonderen Tag sind</p>
+      <h1>Happy Birthday, Linus!<span>🎂</span></h1>
+      <p class="tagline">Du hast schon so lange dein Geburtstagsgeschenk nicht angenommen. 😌</p>
 
-      <div class="counter">
-        <span id="days">0</span>
-        <small>Tage</small>
+      <div class="counter-wrap">
+        <div class="counter">
+          <div class="count-box">
+            <div class="digit-group">
+              <span id="days">0</span>
+              <small>Tage</small>
+            </div>
+            <div class="digit-group">
+              <span id="hours">0</span>
+              <small>Std</small>
+            </div>
+            <div class="digit-group">
+              <span id="minutes">0</span>
+              <small>Min</small>
+            </div>
+            <div class="digit-group">
+              <span id="seconds">0</span>
+              <small>Sek</small>
+            </div>
+          </div>
+        </div>
       </div>
 
       <p id="sinceText" class="since"></p>
-      <p id="message" class="message">Eine kleine Reise durch die Zeit. 🚂</p>
+
+      <div class="message-panel">
+        <p id="message" class="message">Zeit für dein Geschenk</p>
+        <button id="surpriseBtn" class="surprise-btn" type="button">Auswahl starten</button>
+
+        <div id="surveyPanel" class="survey-panel" aria-live="polite">
+          <p id="surveyQuestion" class="survey-title">Mini-Umfrage</p>
+          <div id="surveyOptions" class="survey-options">
+            <label><input type="radio" name="giftChoice" value="Kuchen"> Steam-Gutschein für mehr Flugzeuge</label>
+            <label><input type="radio" name="giftChoice" value="Reise"> Essen gehen mit Lisa und Mirco</label>
+            <label><input type="radio" name="giftChoice" value="Spaß"> Beides</label>
+          </div>
+          <div class="survey-actions">
+            <button id="submitSurvey" class="survey-submit" type="button">Weiter</button>
+            <button id="surveyBack" class="survey-back" type="button" hidden>Zurück</button>
+          </div>
+        </div>
+      </div>
     </main>
 
     <div class="train" aria-hidden="true">
@@ -35,8 +72,6 @@
       <span class="wagon food">🍕</span>
       <span class="wagon food">🍰</span>
     </div>
-
-    <footer>✨ Eine bunte Seite für einen besonderen Menschen ✨</footer>
   </div>
 
   <script src="script.js"></script>
